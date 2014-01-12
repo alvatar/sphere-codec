@@ -1,5 +1,6 @@
 (define modules
-  '(base64))
+  '(base64
+    util))
 
 (define-task compile ()
   (for-each (lambda (m)
