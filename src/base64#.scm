@@ -4,6 +4,8 @@
 (##namespace ("codec:base64#"
               base64-substring->u8vector
               base64-string->u8vector
+              bignum->base64-string
+              base64-string->bignum
               subu8vector->base64-string
               u8vector->base64-string
               ))
