@@ -7,6 +7,19 @@
 ;; feed the content of the message to digest (for example
 ;; genport-write-subu8vector will subsume subu8vector->base64-string).
 
+(cond-expand
+ (optimize
+  (declare (standard-bindings) (extended-bindings) (not safe) (block)))
+ (debug
+  (declare (safe) (debug) (debug-location) (debug-source) (debug-environments)))
+ (else (void)))
+
+(##namespace (""
+              apply-u8vector-append
+              bignum->u8vector
+              u8vector->bignum
+              ))
+
 
 ;;------------------------------------------------------------------------------
 ;; Representation of fifos.
